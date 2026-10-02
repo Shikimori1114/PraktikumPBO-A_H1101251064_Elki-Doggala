@@ -64,7 +64,7 @@ class Intensif extends PaketBimbel {
     public function hitungTotal() {
         $total = $this->hargaDasar * $this->bulan;
         if ($this->bulan > 3) {
-            $total -= ($total * 0.04); // Diskon 10%
+            $total -= ($total * 0.04); // Diskon 4%
         }
         return $total;
     }
@@ -75,7 +75,7 @@ class Intensif extends PaketBimbel {
 
     // Method cetakDetail (BONUS)
     public function cetakDetail() {
-        $infoDiskon = $this->bulan > 3 ? " (Diskon 10%)" : "";
+        $infoDiskon = $this->bulan > 3 ? " (Diskon 4%)" : "";
         return "Paket {$this->getJenis()} {$this->bulan} bulan{$infoDiskon}";
     }
 }
